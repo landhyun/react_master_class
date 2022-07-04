@@ -1,21 +1,23 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const Father = styled.div`
+const Wrapper = styled.div`
     display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: ${(props) => props.theme.backgroundColor};
 `;
 
-const Input = styled.input.attrs({required: true, maxLength: 3})`
-    background-color: color;
+const Title = styled.h1`
+    color: ${(props) => props.theme.textColor};
 `;
 
 function App() {
     return (
-        <Father as="main">
-            <Input />
-            <Input />
-            <Input />
-            <Input />
-        </Father>
+      <Wrapper>
+        <Title>Title</Title>
+      </Wrapper>
     );
 }
 
